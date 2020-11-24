@@ -17,7 +17,9 @@ namespace StackExchange.Redis.Extensions.Binary
         {
             using var ms = new MemoryStream(serializedObject);
 
+#pragma warning disable SYSLIB0011 // 类型或成员已过时
             return (T)binaryFormatter.Deserialize(ms);
+#pragma warning restore SYSLIB0011 // 类型或成员已过时
         }
 
         /// <inheritdoc/>
@@ -25,7 +27,9 @@ namespace StackExchange.Redis.Extensions.Binary
         {
             using var ms = new MemoryStream();
 
+#pragma warning disable SYSLIB0011 // 类型或成员已过时
             binaryFormatter.Serialize(ms, item);
+#pragma warning restore SYSLIB0011 // 类型或成员已过时
             return ms.ToArray();
         }
     }

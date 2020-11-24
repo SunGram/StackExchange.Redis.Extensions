@@ -14,7 +14,9 @@ using StackExchange.Redis.Extensions.Core.Models;
 namespace StackExchange.Redis.Extensions.Core.Implementations
 {
     /// <inheritdoc/>
+#pragma warning disable CA1063 // 正确实现 IDisposable
     public class RedisCacheConnectionPoolManager : IRedisCacheConnectionPoolManager
+#pragma warning restore CA1063 // 正确实现 IDisposable
     {
         private readonly ConcurrentBag<IStateAwareConnection> connections;
         private readonly RedisConfiguration redisConfiguration;
@@ -34,7 +36,9 @@ namespace StackExchange.Redis.Extensions.Core.Implementations
         }
 
         /// <inheritdoc/>
+#pragma warning disable CA1063 // 正确实现 IDisposable
         public void Dispose()
+#pragma warning restore CA1063 // 正确实现 IDisposable
         {
             foreach (var connection in connections)
                 connection.Dispose();
