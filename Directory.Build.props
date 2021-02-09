@@ -4,8 +4,8 @@
   <!-- General information -->
   <PropertyGroup>
     <Authors>Ugo Lattanzi</Authors>
-    <VersionPrefix>6.3.7</VersionPrefix>
-    <VersionSuffix>pre</VersionSuffix>
+    <VersionPrefix>6.4</VersionPrefix>
+    <!-- <VersionSuffix>pre</VersionSuffix> -->
     
     <!-- <TargetFrameworks>netstandard2.0;net461;net472;netcoreapp3.0;netcoreapp3.1</TargetFrameworks> -->
     <TargetFrameworks>net5.0</TargetFrameworks>
